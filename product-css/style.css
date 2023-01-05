@@ -1,0 +1,118 @@
+.showProducts {
+  --blue-clr: #0058aa;
+  --deep-clr: #000;
+  --light-clr: #7d7d7d;
+  --bx-bg-clr: #f4f4f4;
+
+  position: absolute;
+  background-color: var(--bx-bg-clr);
+
+  max-width: 1140px;
+
+  padding: 0 64px;
+
+  display: flex;
+  visibility: hidden;
+  bottom: 0;
+  right: 0;
+
+  transform: translateY(100%);
+
+  border-radius: 4px;
+}
+
+.indicateIcon {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+
+  padding: 30px;
+  border-radius: 4px;
+
+  background-color: var(--bx-bg-clr);
+  transform: rotate(-45deg);
+}
+
+.getStartedDiv {
+  display: flex;
+
+  flex-direction: row;
+
+  padding: 32px 0;
+}
+
+.getStartedSelf {
+  padding-right: 56px;
+
+  font-size: 32px;
+
+  color: var(--light-clr);
+}
+
+.getStartedItems {
+  display: flex;
+  flex-direction: row;
+}
+
+.StartedItems-1 {
+  padding-right: 48px;
+}
+
+.colorit-blue {
+  color: var(--blue-clr);
+}
+
+.start-item-title {
+  font-size: 15px;
+}
+
+.ech-itm {
+  max-width: 200px;
+
+  padding-left: 16px;
+
+  margin-top: 24px;
+  border-left: 2px solid var(--blue-clr);
+}
+
+.sub-start-item-title {
+  font-size: 18px;
+
+  color: var(--deep-clr);
+}
+
+.sub-details {
+  font-size: 14px;
+
+  color: var(--light-clr);
+}
+
+.opcityAnim {
+  animation: opcityAnim 200ms ease-in-out 1 forwards;
+}
+
+.dec-opcityAnim {
+  animation: dec-opcityAnim 200ms ease-in-out 1 forwards;
+}
+
+@keyframes opcityAnim {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes dec-opcityAnim {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

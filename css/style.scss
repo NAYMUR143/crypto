@@ -24,6 +24,7 @@ body {
   overflow-x: hidden;
   color: #f4f4f4;
   background-color: rgb(6, 17, 33);
+  font-size: 92%;
 }
 body img {
   width: 100%;
@@ -37,6 +38,9 @@ body ul li {
 }
 .padding {
   padding: 0px 60px;
+}
+.ovflw {
+  overflow: hidden;
 }
 // header
 header {
@@ -60,7 +64,9 @@ header {
 }
 // herosection
 .herosection {
-  padding: 130px 0px;
+  height: 80vh;
+  display: grid;
+  place-content: center;
   .herowrap {
     text-align: center;
   }
@@ -137,38 +143,49 @@ header {
   transition: top 0.5s linear 0s;
   box-shadow: rgba(0, 7, 17, 0.4) 0px 6px 32px;
   border-radius: 20px;
-  padding: 25px 60px;
-  margin: 20px 30px;
+  padding: 25px 160px;
+  margin: 30px auto;
+  width: 80%;
   .dropdownresult {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: 5px 0px;
+    span {
+      font-size: 1.45em;
+      font-weight: 600;
+    }
     .dflx {
       display: flex;
       align-items: center;
       gap: 5px;
     }
     .arrw {
-      padding-left: 14px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 2.2em;
+      color: #1199fa;
     }
   }
   .dflx {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .tblinput {
-    padding: 8px 0px;
+    padding: 5px 0px;
     input {
       background: transparent;
       border: none;
       font-family: acumin;
-      font-size: 1.3em;
+      font-size: 1.5em;
       outline: none;
       color: #f4f4f4;
       width: 110px;
     }
     span {
       color: #1199fa;
+      font-size: 1.3em;
     }
   }
   h1 {
@@ -193,7 +210,7 @@ header {
     height: 135px;
     sub {
       font-size: 0.1em;
-      transform: translateY(-20px);
+      transform: translateY(-20px) translateX(-20px);
       display: inline-block;
     }
   }
@@ -423,11 +440,20 @@ footer {
 .footimg {
   padding-left: 100px;
   .dflx {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
     &:last-child {
       img {
         width: 100px;
+      }
+    }
+    &:nth-child(2) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50% auto;
+      img {
+        width: 100%;
       }
     }
     img {

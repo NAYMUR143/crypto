@@ -1,4 +1,6 @@
 const qs_a = (sl) => document.querySelectorAll(sl);
+// const qt_el = (sl) => document.getElementById(sl);
+const qt_el = (sl) => document.getElementById(sl);
 const on = (sl, e, f) => sl.addEventListener(e, f);
 const css = (el, obj) => Object.assign(el.style, obj);
 const mk = (el) => document.createElement(el);

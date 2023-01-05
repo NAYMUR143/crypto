@@ -10,10 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/658ae75fec.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./product-css/style.css" />
@@ -26,7 +23,7 @@
       <div class="container">
         <nav style="position: relative !important">
           <div class="logo">
-            <img src="./img/logo.webp" alt="" />
+            <h1>HolderRewards.com</h1>
           </div>
 
           <ul data-trg>
@@ -100,17 +97,17 @@
         <div class="herowrap padding">
           <div class="heading">
             <div class="ovflw">
-              <h1>Get the most out of your</h1>
+              <h1 data-aos="fade-up">Get the most out of your</h1>
             </div>
             <div class="ovflw">
-              <h1>assets, safety</h1>
+              <h1 data-aos="fade-up">assets, safety</h1>
             </div>
           </div>
-          <p>
+          <p data-aos="fade-up">
             <span>37+ </span>cryptocurrencies and stablecoins available, <br />
             with exclusive Private Members’ perks.
           </p>
-          <p>
+          <p data-aos="fade-up">
             pPrivate Members enjoy an <span>extra 2% p.a.</span> rewards <br />
             distributed in CRO.*
           </p>
@@ -123,7 +120,7 @@
         <div class="coinwrap padding">
           <div class="row">
             <div class="col-md-4">
-              <div class="coincard">
+              <div class="coincard" data-aos="fade-up">
                 <img src="./img/btc.webp" alt="" />
                 <h4><span>BTC</span> up to</h4>
                 <h1>3%</h1>
@@ -131,7 +128,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="coincard">
+              <div class="coincard" data-aos="fade-up" data-aos-delay="100">
                 <img src="./img/eth.webp" alt="" />
                 <h4><span>ETH</span> up to</h4>
                 <h1>4%</h1>
@@ -139,7 +136,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="coincard">
+              <div class="coincard" data-aos="fade-up" data-aos-delay="200">
                 <img src="./img/usdc.webp" alt="" />
                 <h4><span>USDC</span> up to</h4>
                 <h1>4.5%</h1>
@@ -156,22 +153,22 @@
         <div class="calculatewrap">
           <div class="calculatetitle">
             <div class="ovflw">
-              <h1>Calculate Your Rewards</h1>
+              <h1 data-aos="fade-up">Calculate Your Rewards</h1>
             </div>
-            <p>
+            <p data-aos="fade-up">
               Select a token, amount, CRO stake and term <br />
               to calculate your rewards *
             </p>
           </div>
-          <div class="calculatetable" data-tkn>
+          <div class="calculatetable" data-tkn data-aos="fade-up">
             <div class="dflx" data-tkn>
               <div class="tble dropToken" data-tkn>
                 <h1 data-tkn>TOKEN</h1>
                 <div class="dropdown" data-tkn>
                   <div class="dropdownresult" data-tkn>
                     <div class="dflx dyn-DATA" data-tkn>
-                      <img src="./img/CRO.webp" alt="" data-tkn />
-                      <span data-tkn>CRO</span>
+                      <img src="./img/usdc.webp" alt="" data-tkn />
+                      <span data-tkn>USDC</span>
                     </div>
                     <div class="arrw" data-tkn>
                       <i class="bx bx-chevron-down" data-tkn></i>
@@ -184,22 +181,27 @@
                 <h1>AMOUNT (USD) <i class="bx bx-info-circle"></i></h1>
                 <div class="tblinput">
                   <span>$</span>
-                  <input type="text" value="5000" />
+                  <input
+                    type="text"
+                    value="15"
+                    id="amountinput"
+                    onchange="inputChange()"
+                  />
                 </div>
               </div>
 
               <div class="TokenDropDownContainer" data-tkn>
                 <div class="token-item" data-tkn>
                   <div data-tkn>
-                    <img src="./img/CRO.webp" alt="" data-tkn />
+                    <img src="./img/usdc.webp" alt="" data-tkn />
                   </div>
-                  <p data-tkn>Cronos</p>
+                  <p data-tkn>USDC</p>
                 </div>
                 <div class="token-item" data-tkn>
                   <div data-tkn>
-                    <img src="./img/btc.webp" alt="" data-tkn />
+                    <img src="./img/MANAd.webp" alt="" data-tkn />
                   </div>
-                  <p data-tkn>Bitcoin</p>
+                  <p data-tkn>MANA</p>
                 </div>
                 <div class="token-item" data-tkn>
                   <div data-tkn>
@@ -214,22 +216,35 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="earndetails text-center">
-                  <h3>Earn</h3>
-                  <h2>$120.00<sub>USD</sub></h2>
+                  <h3 data-aos="fade-up">Earn</h3>
+                  <div class="ovflw">
+                    <h2 data-aos="fade-up" data-aos-delay="200">
+                      $<span id="year">650.00</span> <sub>USD</sub>
+                    </h2>
+                  </div>
+
                   <p>per year paid in USDC</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="awardflx">
                   <div class="rewardetails text-center">
-                    <h2>3.20%</h2>
+                    <div class="ovflw">
+                      <h2 data-aos="fade-up">65.00%</h2>
+                    </div>
                     <p>
                       Optimised rewards p.a. <i class="bx bx-info-circle"></i>
                     </p>
                   </div>
                   <div class="rewardetails text-center">
-                    <h2>$5.00<sub>USD</sub></h2>
-                    <p>Rewards paid weekly</p>
+                    <div class="ovflw">
+                      <h2 data-aos="fade-up">
+                        $<span id="weekly">65.00</span> <sub>USD</sub>
+                      </h2>
+                    </div>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                      Rewards paid weekly
+                    </p>
                   </div>
                 </div>
               </div>
@@ -248,7 +263,10 @@
       <div class="container">
         <div class="comprwrdwrap">
           <div class="cmprwrdheading">
-            <h1>Compare Reward Rates</h1>
+            <div class="ovflw">
+              <h1 data-aos="fade-up">Compare Reward Rates</h1>
+            </div>
+
             <p>
               *Keeping your funds secure is our priority as the world’s most
               regulated platform in the industry. <br />
@@ -602,7 +620,7 @@
     <!-- download app -->
     <div class="downloadappsec">
       <div class="container">
-        <div class="dwnldappwrap">
+        <div class="dwnldappwrap" data-aos="fade-up">
           <div class="dwnldtxt">
             <img src="./img/download-app-section-icon.webp" alt="" />
             <h1>Make your cryptop <br />work for you.</h1>
@@ -659,18 +677,28 @@
               <img
                 src="./img/Aicpa-square-bb2ee4481f364845f95b58a6bd22eb85.webp"
                 alt=""
+                data-aos="fade-up"
               />
-              <img src="./img/sgs.png" alt="" />
+              <img
+                src="./img/sgs.png"
+                alt=""
+                data-aos="fade-up"
+                data-aos-delay="100"
+              />
               <img
                 src="./img/ISO-IEC-27001-eeda204a09545f242e134de8f1857cdf.webp"
                 alt=""
+                data-aos="fade-up"
+                data-aos-delay="200"
               />
             </div>
             <div class="dflx">
-              <img src="./img/dss.png" alt="" />
+              <img src="./img/dss.png" alt="" data-aos="fade-up" />
               <img
                 src="./img/BSI-a9d9693c91bfbb073293c3a5b0920c28.webp"
                 alt=""
+                data-aos="fade-up"
+                data-aos-delay="100"
               />
             </div>
             <div class="dflx">
@@ -694,5 +722,9 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

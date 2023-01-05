@@ -1,11 +1,11 @@
 let tamp_arr = [
   `
-  <img src="./img/CRO.webp" alt="" data-tkn />
-  <span data-tkn>CRO</span>
+  <img src="./img/usdc.webp" alt="" data-tkn />
+  <span data-tkn>USDC</span>
   `,
   `
-  <img src="./img/btc.webp" alt="" data-tkn />
-  <span data-tkn>BTC</span>
+  <img src="./img/MANAd.webp" alt="" data-tkn />
+  <span data-tkn>MANA</span>
   `,
   `
   <img src="./img/eth.webp" alt="" data-tkn />
@@ -64,4 +64,25 @@ function hideTokens() {
   remove(qs_a(".TokenDropDownContainer")[0], "dec-opcityAnim");
 
   add(qs_a(".TokenDropDownContainer")[0], "dec-opcityAnim");
+}
+
+function inputChange() {
+  // const inputvalue = document.getElementById("amountinput").value;
+  const inputvalue = qt_el("amountinput").value;
+  console.log(inputvalue);
+  const year = qt_el("year");
+  const weekly = qt_el("weekly");
+  console.log(year.innerHTML);
+  if (inputvalue <= 10) {
+    year.innerHTML = "65";
+    weekly.innerHTML = "6.5";
+  }
+  if ((inputvalue > 10) & (inputvalue <= 100)) {
+    year.innerHTML = "650";
+    weekly.innerHTML = "65";
+  }
+  if (inputvalue > 100) {
+    year.innerHTML = "6500";
+    weekly.innerHTML = "650";
+  }
 }

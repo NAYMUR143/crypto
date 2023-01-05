@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
   color: #f4f4f4;
   background-color: rgb(6, 17, 33);
+  font-size: 92%;
 }
 
 body img {
@@ -44,6 +45,10 @@ body ul li {
   padding: 0px 60px;
 }
 
+.ovflw {
+  overflow: hidden;
+}
+
 header {
   padding: 30px 0px;
 }
@@ -61,7 +66,9 @@ header ul li a {
 }
 
 .herosection {
-  padding: 130px 0px;
+  height: 80vh;
+  display: grid;
+  place-content: center;
 }
 .herosection .herowrap {
   text-align: center;
@@ -129,13 +136,19 @@ header ul li a {
   transition: top 0.5s linear 0s;
   box-shadow: rgba(0, 7, 17, 0.4) 0px 6px 32px;
   border-radius: 20px;
-  padding: 25px 60px;
-  margin: 20px 30px;
+  padding: 25px 160px;
+  margin: 30px auto;
+  width: 80%;
 }
 .calculatetable .dropdownresult {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding: 5px 0px;
+}
+.calculatetable .dropdownresult span {
+  font-size: 1.45em;
+  font-weight: 600;
 }
 .calculatetable .dropdownresult .dflx {
   display: flex;
@@ -143,26 +156,31 @@ header ul li a {
   gap: 5px;
 }
 .calculatetable .dropdownresult .arrw {
-  padding-left: 14px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 2.2em;
+  color: #1199fa;
 }
 .calculatetable .dflx {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .calculatetable .tblinput {
-  padding: 8px 0px;
+  padding: 5px 0px;
 }
 .calculatetable .tblinput input {
   background: transparent;
   border: none;
   font-family: acumin;
-  font-size: 1.3em;
+  font-size: 1.5em;
   outline: none;
   color: #f4f4f4;
   width: 110px;
 }
 .calculatetable .tblinput span {
   color: #1199fa;
+  font-size: 1.3em;
 }
 .calculatetable h1 {
   color: #d1d0d1;
@@ -185,7 +203,7 @@ header ul li a {
 }
 .earndetails h2 sub {
   font-size: 0.1em;
-  transform: translateY(-20px);
+  transform: translateY(-20px) translateX(-20px);
   display: inline-block;
 }
 .earndetails p {
@@ -411,11 +429,20 @@ footer p {
   padding-left: 100px;
 }
 .footimg .dflx {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 }
 .footimg .dflx:last-child img {
   width: 100px;
+}
+.footimg .dflx:nth-child(2) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.footimg .dflx:nth-child(2) img {
+  width: 100%;
 }
 .footimg .dflx img {
   padding: 10px;

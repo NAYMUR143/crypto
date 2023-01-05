@@ -17,6 +17,7 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./product-css/style.css" />
+    <link rel="stylesheet" href="./tocken-css/style.css" />
     <script src="./js/selectors.js"></script>
     <script src="./js/app.js" defer></script>
   </head>
@@ -162,26 +163,61 @@
               to calculate your rewards *
             </p>
           </div>
-          <div class="calculatetable">
-            <div class="dflx">
-              <div class="tble">
-                <h1>TOKEN</h1>
-                <div class="dropdown">
-                  <div class="dropdownresult">
-                    <div class="dflx">
-                      <img src="./img/usdc.webp" alt="" /> <span>USDC</span>
+          <div class="calculatetable" data-tkn>
+            <div class="dflx" data-tkn>
+              <div class="tble dropToken" data-tkn>
+                <h1 data-tkn>TOKEN</h1>
+                <div class="dropdown" data-tkn>
+                  <div class="dropdownresult" data-tkn>
+                    <div class="dflx" data-tkn>
+                      <img src="./img/usdc.webp" alt="" data-tkn />
+                      <span data-tkn>USDC</span>
                     </div>
-                    <div class="arrw">
-                      <i class="bx bx-chevron-down"></i>
+                    <div class="arrw" data-tkn>
+                      <i class="bx bx-chevron-down" data-tkn></i>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="tble">
                 <h1>AMOUNT (USD) <i class="bx bx-info-circle"></i></h1>
                 <div class="tblinput">
                   <span>$</span>
                   <input type="text" value="5000" />
+                </div>
+              </div>
+
+              <div class="TokenDropDownContainer" data-tkn>
+                <div class="token-item" data-tkn>
+                  <div data-tkn>
+                    <img
+                      src="https://crypto.com/static/21c9e7c23794ca9fb5f676f0337f9440/34ca5/CRO.png"
+                      alt=""
+                      data-tkn
+                    />
+                  </div>
+                  <p data-tkn>Cronos</p>
+                </div>
+                <div class="token-item" data-tkn>
+                  <div data-tkn>
+                    <img
+                      src="https://crypto.com/static/0e6880e79c6b0f9f6948960fe431be5d/34ca5/BTC.png"
+                      alt=""
+                      data-tkn
+                    />
+                  </div>
+                  <p data-tkn>Bitcoin</p>
+                </div>
+                <div class="token-item" data-tkn>
+                  <div data-tkn>
+                    <img
+                      src="https://crypto.com/static/4943d70a264d268398546cfc7f9cfd4a/34ca5/ETH.png"
+                      alt=""
+                      data-tkn
+                    />
+                  </div>
+                  <p data-tkn>Ethereum</p>
                 </div>
               </div>
             </div>

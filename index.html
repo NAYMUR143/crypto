@@ -16,19 +16,81 @@
     ></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./product-css/style.css" />
+    <script src="./js/selectors.js"></script>
+    <script src="./js/app.js" defer></script>
   </head>
   <body>
     <header>
       <div class="container">
-        <nav>
+        <nav style="position: relative !important">
           <div class="logo">
             <img src="./img/logo.webp" alt="" />
           </div>
-          <ul>
-            <li>
-              <a href="#">Products</a>
+
+          <ul data-trg>
+            <li data-trg>
+              <a href="#" class="mouseOver" data-trg>Products</a>
             </li>
           </ul>
+
+          <div class="showProducts" data-trg>
+            <div class="indicateIcon" data-trg></div>
+
+            <div class="getStartedDiv" data-trg>
+              <div class="getStartedSelf" data-trg>Get Started</div>
+
+              <div class="getStartedItems" data-trg>
+                <div class="StartedItems-1" data-trg>
+                  <div class="start-item-title colorit-blue" data-trg>
+                    BUY AND SELL
+                  </div>
+
+                  <div data-trg>
+                    <div class="ech-itm" data-trg>
+                      <p class="sub-start-item-title" data-trg>App</p>
+                      <p class="sub-details" data-trg>
+                        Trusted by 70M+ customers world-wide
+                      </p>
+                    </div>
+                    <div class="ech-itm" data-trg>
+                      <p class="sub-start-item-title" data-trg>
+                        Crypto.com NFT
+                      </p>
+                      <p class="sub-details" data-trg>
+                        Own the culture you love
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="StartedItems-2" data-trg>
+                  <div class="start-item-title colorit-blue" data-trg>
+                    SPEND
+                  </div>
+
+                  <div data-trg>
+                    <div class="ech-itm" data-trg>
+                      <p class="sub-start-item-title" data-trg>
+                        Metal Visa Cards
+                      </p>
+                      <p class="sub-details" data-trg>
+                        Up to 5% back on all spending
+                      </p>
+                    </div>
+                    <div class="ech-itm" data-trg>
+                      <p class="sub-start-item-title" data-trg>
+                        Crypto.com Pay
+                      </p>
+                      <p class="sub-details" data-trg>
+                        Pay and get paid in crypto
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

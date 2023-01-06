@@ -8,8 +8,8 @@ let tamp_arr = [
   <span data-tkn>MANA</span>
   `,
   `
-  <img src="./img/eth.webp" alt="" data-tkn />
-  <span data-tkn>ETH</span>
+  <img src="./img/sand.png" alt="" data-tkn />
+  <span data-tkn>SAND</span>
   `,
 ];
 
@@ -86,3 +86,12 @@ function inputChange() {
     weekly.innerHTML = "650";
   }
 }
+const prctgeShow = qs_a(".coincard h1");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("prctgeAnimate", entry.isIntersecting);
+  });
+});
+prctgeShow.forEach((prctge) => {
+  observer.observe(prctge);
+});

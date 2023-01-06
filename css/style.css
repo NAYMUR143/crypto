@@ -72,9 +72,7 @@ header ul li a i {
 }
 
 .herosection {
-  height: 80vh;
-  display: grid;
-  place-content: center;
+  padding: 125px 0px 100px;
 }
 .herosection .herowrap {
   text-align: center;
@@ -119,16 +117,18 @@ header ul li a i {
   content: "0%";
 }
 
-.aos-animate .prcntage::after {
+.prcntage.prctgeAnimate::after {
   -webkit-animation: prctage 0.5s linear forwards;
           animation: prctage 0.5s linear forwards;
 }
-.aos-animate .prcntage2::after {
+
+.prcntage2.prctgeAnimate::after {
   content: "4%";
   -webkit-animation: prctage1 0.5s linear forwards;
           animation: prctage1 0.5s linear forwards;
 }
-.aos-animate .prcntage3::after {
+
+.prcntage3.prctgeAnimate::after {
   content: "4.5%";
   -webkit-animation: prctage2 0.5s linear forwards;
           animation: prctage2 0.5s linear forwards;
@@ -240,6 +240,22 @@ header ul li a i {
 .coinsec .coincard {
   text-align: center;
   padding: 80px 0px 100px;
+}
+.coinsec .coincard button {
+  border: none;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin: 15px;
+  background: #007aff;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.coinsec .coincard button:hover {
+  background: #0562c7;
 }
 .coinsec .coincard img {
   width: 80px;

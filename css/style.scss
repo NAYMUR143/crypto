@@ -70,9 +70,7 @@ header {
 }
 // herosection
 .herosection {
-  height: 80vh;
-  display: grid;
-  place-content: center;
+  padding: 125px 0px 100px;
   .herowrap {
     text-align: center;
   }
@@ -117,19 +115,24 @@ header {
     content: "0%";
   }
 }
-.aos-animate {
-  .prcntage {
+
+.prcntage {
+  &.prctgeAnimate {
     &::after {
       animation: prctage 0.5s linear forwards;
     }
   }
-  .prcntage2 {
+}
+.prcntage2 {
+  &.prctgeAnimate {
     &::after {
       content: "4%";
       animation: prctage1 0.5s linear forwards;
     }
   }
-  .prcntage3 {
+}
+.prcntage3 {
+  &.prctgeAnimate {
     &::after {
       content: "4.5%";
       animation: prctage2 0.5s linear forwards;
@@ -191,6 +194,22 @@ header {
   .coincard {
     text-align: center;
     padding: 80px 0px 100px;
+    button {
+      border: none;
+      padding: 10px 25px;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.1em;
+      border-radius: 5px;
+      margin: 15px;
+      background: #007aff;
+      color: #f4f4f4;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      &:hover {
+        background: #0562c7;
+      }
+    }
     img {
       width: 80px;
       margin-bottom: 15px;

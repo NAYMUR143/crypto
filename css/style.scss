@@ -58,6 +58,12 @@ header {
         color: #f4f4f4;
         font-size: 1.2em;
         opacity: 0.5;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        i {
+          font-size: 1.2em;
+        }
       }
     }
   }
@@ -89,6 +95,98 @@ header {
 }
 
 // coinsec
+.prcntage,
+.prcntage2,
+.prcntage3 {
+  position: relative;
+  &::after {
+    content: "0%";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.prcntage2 {
+  &::after {
+    content: "0%";
+  }
+}
+.prcntage3 {
+  &::after {
+    content: "0%";
+  }
+}
+.aos-animate {
+  .prcntage {
+    &::after {
+      animation: prctage 0.5s linear forwards;
+    }
+  }
+  .prcntage2 {
+    &::after {
+      content: "4%";
+      animation: prctage1 0.5s linear forwards;
+    }
+  }
+  .prcntage3 {
+    &::after {
+      content: "4.5%";
+      animation: prctage2 0.5s linear forwards;
+    }
+  }
+}
+@keyframes prctage {
+  0% {
+    content: "0%";
+  }
+  30% {
+    content: "1%";
+  }
+  60% {
+    content: "2%";
+  }
+  100% {
+    content: "3%";
+  }
+}
+@keyframes prctage1 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  100% {
+    content: "4%";
+  }
+}
+@keyframes prctage2 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  85% {
+    content: "4%";
+  }
+  100% {
+    content: "4.5%";
+  }
+}
 .coinsec {
   .coincard {
     text-align: center;
@@ -107,6 +205,7 @@ header {
     h1 {
       line-height: 120%;
       font-size: 6em;
+      height: 80px;
     }
     p {
       font-size: 2em;

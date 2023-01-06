@@ -63,6 +63,12 @@ header ul li a {
   color: #f4f4f4;
   font-size: 1.2em;
   opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+header ul li a i {
+  font-size: 1.2em;
 }
 
 .herosection {
@@ -90,6 +96,147 @@ header ul li a {
   font-weight: 800;
 }
 
+.prcntage,
+.prcntage2,
+.prcntage3 {
+  position: relative;
+}
+.prcntage::after,
+.prcntage2::after,
+.prcntage3::after {
+  content: "0%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prcntage2::after {
+  content: "0%";
+}
+
+.prcntage3::after {
+  content: "0%";
+}
+
+.aos-animate .prcntage::after {
+  -webkit-animation: prctage 0.5s linear forwards;
+          animation: prctage 0.5s linear forwards;
+}
+.aos-animate .prcntage2::after {
+  content: "4%";
+  -webkit-animation: prctage1 0.5s linear forwards;
+          animation: prctage1 0.5s linear forwards;
+}
+.aos-animate .prcntage3::after {
+  content: "4.5%";
+  -webkit-animation: prctage2 0.5s linear forwards;
+          animation: prctage2 0.5s linear forwards;
+}
+
+@-webkit-keyframes prctage {
+  0% {
+    content: "0%";
+  }
+  30% {
+    content: "1%";
+  }
+  60% {
+    content: "2%";
+  }
+  100% {
+    content: "3%";
+  }
+}
+
+@keyframes prctage {
+  0% {
+    content: "0%";
+  }
+  30% {
+    content: "1%";
+  }
+  60% {
+    content: "2%";
+  }
+  100% {
+    content: "3%";
+  }
+}
+@-webkit-keyframes prctage1 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  100% {
+    content: "4%";
+  }
+}
+@keyframes prctage1 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  100% {
+    content: "4%";
+  }
+}
+@-webkit-keyframes prctage2 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  85% {
+    content: "4%";
+  }
+  100% {
+    content: "4.5%";
+  }
+}
+@keyframes prctage2 {
+  0% {
+    content: "0%";
+  }
+  25% {
+    content: "1%";
+  }
+  50% {
+    content: "2%";
+  }
+  75% {
+    content: "3%";
+  }
+  85% {
+    content: "4%";
+  }
+  100% {
+    content: "4.5%";
+  }
+}
 .coinsec .coincard {
   text-align: center;
   padding: 80px 0px 100px;
@@ -108,6 +255,7 @@ header ul li a {
 .coinsec .coincard h1 {
   line-height: 120%;
   font-size: 6em;
+  height: 80px;
 }
 .coinsec .coincard p {
   font-size: 2em;
